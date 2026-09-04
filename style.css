@@ -13,12 +13,14 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     width: 240px;
+    margin-top: 20px;
 }
 
 .inputNumbers {
     height: 50px;
     width: 100%;
     border-radius: 8px;
+    font-size: xx-large;
 }
 .bottom {
     display: flex;
@@ -35,6 +37,9 @@ body {
 .row {
     display: flex;
     justify-content: space-evenly;
+}
+#zero {
+    flex-grow: 0.7;
 }
 .signs {
     flex-grow: 3;
