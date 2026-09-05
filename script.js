@@ -17,3 +17,18 @@ function operate(a,b,operator) {
     if(operator === "*") multiply(a,b);
     if(operator === "/") divide(a,b);
 }
+
+let expression = "";
+let screen = document.querySelector(".inputNumbers");
+const onMouseClick = (e) => {
+    expression += e.target.textContent;
+    screen.value = expression;
+    console.log(expression);
+}
+let digit = document.querySelectorAll(".digit").forEach((e) => {
+    e.addEventListener("click", onMouseClick);
+})
+
+let sign = document.querySelectorAll(".operation").forEach((e) => {
+    e.addEventListener("click", onMouseClick);
+});
