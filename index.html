@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <div class="top">
-            <input type="text" class="inputNumbers">
+            <div class="previous-operand"></div>
+            <div class="current-operand"></div>
         </div>
 
         <div class="bottom">
             <div class="numbers">
+                <div class="clear-delete">
+                    <button class="span-two" id="clear-all">AC</button>
+                    <button id="delete">DEL</button>
+                </div>
                 <div class="row">
                     <button class="digit">7</button>
                     <button class="digit">8</button>
@@ -31,7 +37,7 @@
                  </div>
                   <div class="row">
                     <button class="digit" id="zero">0</button>
-                    <button id="decimal">.</button>
+                    <button class="digit" id="decimal">.</button>
                 </div>
             </div>
 
@@ -39,13 +45,13 @@
                 <button class="operation" id="plus">+</button>
                 <button class="operation" id="minus">-</button>
                 <button class="operation" id="multiply">*</button>
-                <button class="operation" id="divide">/</button>
-                <button class="operation" id="equals">=</button>
+                <button class="operation" id="divide">÷</button>
+                <button id="equals">=</button>
             </div>
         </div>
 
     </div>
     
-    <script src="script.js"></script>
+    
 </body>
 </html>

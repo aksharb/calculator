@@ -1,34 +1,28 @@
+const numberButtons = document.querySelectorAll(".digit");
+const operationButtons = document.querySelectorAll(".operation")
+const equalsButton = document.querySelector("#equals");
+const deleteButton = document.querySelector("#delete");
+const clearAllButton = document.querySelector("#clear-all");
+
+const previousOperandTextElement = document.querySelector(".previous-operand");
+const currentOperandTextElement = document.querySelector(".current-operand");
+
 function add(a,b) {
-    return a + b;
+    console.log(a+b);
 }
 function subtract(a,b) {
-    return a - b;
+    console.log(a-b);
 }
 function multiply(a,b) {
-    return a * b;
+    console.log(a*b);
 }
 function divide(a,b) {
-    return a/b;
+    console.log(a/b);
 }
 
-function operate(a,b,operator) {
-    if(operator === "+") add(a,b);
-    if(operator === "-") subtract(a,b);
-    if(operator === "*") multiply(a,b);
-    if(operator === "/") divide(a,b);
+function operate(a,b, operand) {
+    if(operand ==="+") add(a,b);
+    if(operand ==="-") subtract(a,b);
+    if(operand ==="*") multiply(a,b);
+    if(operand ==="/") divide(a,b);
 }
-
-let expression = "";
-let screen = document.querySelector(".inputNumbers");
-const onMouseClick = (e) => {
-    expression += e.target.textContent;
-    screen.value = expression;
-    console.log(expression);
-}
-let digit = document.querySelectorAll(".digit").forEach((e) => {
-    e.addEventListener("click", onMouseClick);
-})
-
-let sign = document.querySelectorAll(".operation").forEach((e) => {
-    e.addEventListener("click", onMouseClick);
-});
